@@ -1,0 +1,131 @@
+:root {
+    --color-primary-regular: hsl(31, 77%, 52%);
+    --color-primary-medium: hsl(184, 100%, 22%);
+    --color-primary-dark: hsl(179, 100%, 13%);
+
+    --color-neutral-light: hsla(0, 0%, 100%, 0.75);
+    --color-neutral-regular: hsl(0, 0%, 95%);
+
+    --color-article-one: var(--color-primary-regular);
+    --color-article-two: var(--color-primary-medium);
+    --color-article-three: var(--color-primary-dark);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--color-neutral-regular);
+    font-family: 'Lexend Deca', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+section {
+    display: flex;
+    max-width: 900px;
+    flex-direction: column;
+    margin: 3rem 1.5rem;
+    border-radius: 7px;
+    overflow: hidden;
+}
+
+article {
+    flex: 1 1 100%;
+    padding: 3em 3em 1.5em;
+}
+
+article.one {
+    background-color: var(--color-article-one);
+}
+
+article.two {
+    background-color: var(--color-article-two);
+}
+
+article.three {
+    background-color: var(--color-article-three);
+}
+
+article > * {
+    margin-bottom: 1.5rem;
+}
+
+h1 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-size: 2rem;
+    color: var(--color-neutral-regular);
+    text-transform: uppercase;
+    margin-top: 2rem;
+}
+
+p {
+    font-size: 0.9375rem;
+    color: var(--color-neutral-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--color-neutral-regular);
+    border: 2px solid var(--color-neutral-regular);
+    font-size: 0.95rem;
+    padding: 0.7em 1.8em;
+    border-radius: 100vmax;
+}
+
+article.one a {
+    color: var(--color-article-one);
+}
+
+article.two a {
+    color: var(--color-article-two);
+}
+
+article.three a {
+    color: var(--color-article-three);
+}
+
+article a:hover,
+article a:focus {
+    color: var(--color-neutral-regular);
+}
+article.one a:hover,
+article.one a:focus {
+    background-color: var(--color-article-one);
+}
+article.two a:hover,
+article.two a:focus {
+    background-color: var(--color-article-two);
+}
+article.three a:hover,
+article.three a:focus {
+    background-color: var(--color-article-three);
+}
+
+
+
+@media screen and (min-width: 50em) {
+    section {
+        flex-direction: row;
+    }
+
+    a {
+        margin-top: 3rem;
+    }
+
+}
