@@ -1,3 +1,5 @@
+/* Custom Properties */
+
 :root {
     --color-primary-regular: hsl(31, 77%, 52%);
     --color-primary-medium: hsl(184, 100%, 22%);
@@ -10,6 +12,8 @@
     --color-article-two: var(--color-primary-medium);
     --color-article-three: var(--color-primary-dark);
 }
+
+/* General Styles */
 
 * {
     margin: 0;
@@ -80,6 +84,7 @@ p {
 
 a {
     text-decoration: none;
+    text-align: center;
     display: inline-block;
     background-color: var(--color-neutral-regular);
     border: 2px solid var(--color-neutral-regular);
@@ -117,7 +122,7 @@ article.three a:focus {
     background-color: var(--color-article-three);
 }
 
-
+/* Media Query Breakpoint for Responsive Layout */
 
 @media screen and (min-width: 50em) {
     section {
@@ -127,5 +132,4 @@ article.three a:focus {
     a {
         margin-top: 3rem;
     }
-
 }
