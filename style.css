@@ -8,9 +8,9 @@
     --color-neutral-light: hsla(0, 0%, 100%, 0.75);
     --color-neutral-regular: hsl(0, 0%, 95%);
 
-    --color-article-one: var(--color-primary-regular);
-    --color-article-two: var(--color-primary-medium);
-    --color-article-three: var(--color-primary-dark);
+    --color-section-one: var(--color-primary-regular);
+    --color-section-two: var(--color-primary-medium);
+    --color-section-three: var(--color-primary-dark);
 }
 
 /* General Styles */
@@ -38,7 +38,7 @@ img {
     display: block;
 }
 
-section {
+main {
     display: flex;
     max-width: 900px;
     flex-direction: column;
@@ -47,30 +47,30 @@ section {
     overflow: hidden;
 }
 
-article {
+section {
     flex: 1 1 100%;
     padding: 3em 2.8em 1.5em;
 }
 
-article.one {
-    background-color: var(--color-article-one);
+section.one {
+    background-color: var(--color-section-one);
 }
 
-article.two {
-    background-color: var(--color-article-two);
+section.two {
+    background-color: var(--color-section-two);
 }
 
-article.three {
-    background-color: var(--color-article-three);
+section.three {
+    background-color: var(--color-section-three);
 }
 
-article > * {
+section > * {
     margin-bottom: 1.5rem;
 }
 
-h1 {
+h2 {
     font-family: 'Big Shoulders Display', cursive;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--color-neutral-regular);
     text-transform: uppercase;
     margin-top: 2rem;
@@ -93,39 +93,39 @@ a {
     border-radius: 100vmax;
 }
 
-article.one a {
-    color: var(--color-article-one);
+section.one a {
+    color: var(--color-section-one);
 }
 
-article.two a {
-    color: var(--color-article-two);
+section.two a {
+    color: var(--color-section-two);
 }
 
-article.three a {
-    color: var(--color-article-three);
+section.three a {
+    color: var(--color-section-three);
 }
 
-article a:hover,
-article a:focus {
+section a:hover,
+section a:focus {
     color: var(--color-neutral-regular);
 }
-article.one a:hover,
-article.one a:focus {
-    background-color: var(--color-article-one);
+section.one a:hover,
+section.one a:focus {
+    background-color: var(--color-section-one);
 }
-article.two a:hover,
-article.two a:focus {
-    background-color: var(--color-article-two);
+section.two a:hover,
+section.two a:focus {
+    background-color: var(--color-section-two);
 }
-article.three a:hover,
-article.three a:focus {
-    background-color: var(--color-article-three);
+section.three a:hover,
+section.three a:focus {
+    background-color: var(--color-section-three);
 }
 
 /* Media Query Breakpoint for Responsive Layout */
 
 @media screen and (min-width: 50em) {
-    section {
+    main {
         flex-direction: row;
     }
 
